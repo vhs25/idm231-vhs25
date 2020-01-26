@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'spirit';
+    src: url('fonts/spirit/spirit-webfont.woff2') format('woff2');
+    src: url('fonts/spirit/spirit-webfont.woff') format('woff');
+}
+@font-face{
+    font-family:'comme_light';
+    src: url('fonts/comme/comme-thin-webfont.woff') format('woff');
+    src: url('fonts/comme/comme-thin-webfont.woff2') format('woff2')
+}
+@font-face{
+    font-family: 'comme_med';
+    src: url('fonts/comme/comme-medium-webfont.woff') format('woff');
+    src: url('fonts/comme/comme-medium-webfont.woff2') format('woff2');
+}
+@font-face{
+    font-family: 'comme_bold';
+    src: url('fonts/comme/comme-bold-webfont.woff') format('woff');
+    src: url('fonts/comme/comme-bold-webfont.woff2') format('woff2');
+}
+
+*{
+    font-size: 100%;
+}
+
+.home h1{
+    font-family: spirit;
+    font-size: 3em;
+    letter-spacing: .075em;
+}
+.home h2{
+    font-family: comme_med;
+    font-size: 1.5em;
+}
+
+form h3{
+    font-family: comme_light;
+    font-size: 1.05em;
+}
+
+.cards img{
+    border-radius: 17px;
+    box-shadow: 0 5px 10px 4px lightgray;
+}
+
+.about p{
+    font-family: comme_light;
+    font-size: 1.05em;
+    line-height: 2em;
+}
