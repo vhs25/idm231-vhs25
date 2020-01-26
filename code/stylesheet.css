@@ -27,7 +27,7 @@
 **/
 
 :root{
-    --orange: #ef8033;
+    --orange: #fbaa71;
     --primary: var(--orange);
 
     --blue: #2685a8;
@@ -48,18 +48,19 @@
     font-size: 4em;
     letter-spacing: .075em;
     text-align: center;
-    margin: 1.25em 0 .75em;
+    margin: 1em 0;
 }
 .home h2{
     font-family: spirit;
     font-size: 3em;
-    margin: 1em 0 .5em;
+    margin: .5em 0 .5em;
     text-align: center;
 }
 
 form h3{
+    color: var(--orange);
     font-family: comme_light;
-    font-size: 1.05em;
+    font-size: 1.2em;
     text-align: center;
 }
 
