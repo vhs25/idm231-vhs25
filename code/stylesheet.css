@@ -65,23 +65,26 @@ form h3{
     text-align: center;
 }
 
-.cards{
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+.flip-card-front{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
     margin: 2em 0 7em;
+    perspective: 1000px;
 }
-.cards img{
+.flip-card-front img{
     margin: 1em .5em;
     border-radius: 17px;
     box-shadow: 0 5px 10px 4px lightgray;
 }
 
-    .hover{
-        display: none;
-    }
-    .cards_hover{
+    .flip-card-back{
         position: absolute;
         z-index: 1;
         top: 300px;
@@ -93,16 +96,31 @@ form h3{
 
         margin: 2em 7em;
         max-width: 80%;
+
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
     }
-    .cards_hover img{
+
+    .flip-card-back img{
         margin: 1em .5em;
         border-radius: 17px;
         box-shadow: 0 5px 10px 4px lightgray;
         max-height: 210px;
+    }
 
+    .flip-card-front, .flip-card-back {
+        position: relative;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+    .flip-card:hover .flip-card-back {
+        transform: rotateY(180deg);
     }
 
 
+ 
+    
 .scroll{
     box-sizing: border-box;
     margin: 13% 0;
