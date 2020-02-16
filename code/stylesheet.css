@@ -150,9 +150,11 @@ form h3{
 
 
     /* POP-UP **/
-    .pop-up{
+    [hidden]{
         display: none;
-
+    }
+    
+    .pop-up{
         position: fixed;
         z-index: 1;
         top: 0px;
