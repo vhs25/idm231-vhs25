@@ -2,6 +2,7 @@
 <html lang="en">
 
 <link href="stylesheet.css" type="text/css" rel="stylesheet">
+<script src="main.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -16,29 +17,40 @@
         <h1>Which Major Arcana are you?</h1>
         <h2>Pick a Card...</h2>
 
-        <form>
-            <h3>Your Birthday</h3> 
+        <h3>What's your birthday?</h3>
+        <form> 
+                <div class="form2">
+                    <label for="month">Month:</label><br>
+                    <input type="text" id="month" name="month">
+                </div><div class="form1">
+                    <label for="day">Day:</label><br>
+                    <input type="text" id="day" name="day">
+            </div>
         </form>
+
+
 
         <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                   <div class="row1">
-                    <img src="images/card_back_1.png" >
-                    <img src="images/card_back_2.png" >
-                    <img src="images/card_back_3.png" >
-                    <img src="images/card_back_4.png" >
-                    <img src="images/card_back_5.png" >
-                    <img src="images/card_back_6.png" >
+                    <button class="card"> <img src="images/card_back_1.png" > </button>
+                    <button class="card"> <img src="images/card_back_2.png" > </button>
+                    <button class="card"> <img src="images/card_back_3.png" > </button>
+                    <button class="card"> <img src="images/card_back_4.png" > </button>
+                    <button class="card"> <img src="images/card_back_5.png" > </button>
+                    <button class="card"> <img src="images/card_back_6.png" > </button>
                 </div>
                 <div class="row2">
-                    <img src="images/card_back_7.png" >
-                    <img src="images/card_back_8.png" >
-                    <img src="images/card_back_9.png" >   
-                    <img src="images/card_back_10.png" >             
-                    <img src="images/card_back_11.png" >
-                    <img src="images/card_back_12.png" >
+                    <button class="card"> <img src="images/card_back_7.png" > </button>
+                    <button class="card"> <img src="images/card_back_8.png" > </button>
+                    <button class="card"> <img src="images/card_back_9.png" > </button>
+                    <button class="card"> <img src="images/card_back_10.png" > </button> 
+                    <button class="card"> <img src="images/card_back_11.png" > </button>
+                    <button class="card"> <img src="images/card_back_12.png" > </button>
                 </div>
+
+                <!--
               </div>
                 <div class="flip-card-back">
                   <div class="row1">
@@ -61,7 +73,9 @@
             </div>
           </div>
 
-        <!--<div class="cards">
+
+
+        <div class="cards">
             <div class="row_1">
                 <img src="images/card_back_1.png" >
                 <img src="images/card_back_2.png" >
@@ -109,16 +123,15 @@
             <p>Explore cards by random selection, or enter your birthday to find the card that represents you!</p>
         </div>
     </div>
-
-
-    <div class="hide" hidden>
-        <div class="pop-up">
-            <div class="pop-up_box">
+    
+   
+    <button><div class="pop-up" hidden>
+        <div class="pop-up_box">
                 <img src="images/themagician_aries.png" alt="The Magician Card">
                 <h1>The Magician</h1>
                 <p>The Magician card represents a resourceful, self-empowered engergy. Those who embody the Magician card are able to harness that boundless energy and use it to take action and work towards achieving their goals.</p>
-            </div>
         </div>
-    </div>
+    </div></button>
+    
 </body>
 </html>

@@ -10,12 +10,13 @@
     src: url('fonts/comme/comme-thin-webfont.woff') format('woff');
     src: url('fonts/comme/comme-thin-webfont.woff2') format('woff2')
 }
-/*
+
 @font-face{
     font-family: 'comme_reg';
     src: url('fonts/comme/comme-regular_1-webfont.woff') format('woff');
     src: url('fonts/comme/comme-regular_1-webfont.woff2') format('woff2');
 }
+/*
 @font-face{
     font-family: 'comme_med';
     src: url('fonts/comme/comme-medium-webfont.woff') format('woff');
@@ -51,22 +52,52 @@
     font-size: 4em;
     letter-spacing: .075em;
     text-align: center;
-    margin: 1em 0;
+    margin: .75em 0 .65em;
 }
 .home h2{
     font-family: spirit;
     font-size: 3em;
-    margin: .5em 0 .5em;
+    margin: .1em 0 .5em;
     text-align: center;
 }
 
-form h3{
+h3{
     color: var(--orange);
-    font-family: comme_light;
+    font-family: comme_reg;
     font-size: 1.2em;
     text-align: center;
+    margin: 1.5em 0 1em;
 }
+form{
+    font-family: comme_light;
+    width: 20%;
+    margin: 0 auto;
 
+    display: grid;
+    grid-template-columns: 55.5% 44.5%;
+    grid-area: 
+        'form1 form2';
+    grid-column-gap: .65rem;
+}
+.form1 input{
+    width: 50px;
+}
+.form2{
+    width: 100px;
+    justify-self: right;
+}
+.form2 input{
+    width: 100px;
+}
+form input{
+    border-style: solid;
+    border-width: 1px;
+    padding: .25rem .5rem;
+}
+input[type=text]{
+    font-family: comme_light;
+    font-size: .8rem;
+}
 
 
 .flip-card {
@@ -76,14 +107,18 @@ form h3{
 .flip-card-front{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    margin: 2em 0 7em;
+    justify-content: space-around;
+    margin: 1em 0 7em;
     perspective: 1000px;
 }
 .flip-card-front img{
     margin: 1em .5em;
     border-radius: 17px;
     box-shadow: 0 5px 10px 4px lightgray;
+}
+.flip-card-front img:hover{
+    box-shadow: 0 5px 10px 4px #b3afaf;
+
 }
 
     .flip-card-back{
@@ -150,19 +185,35 @@ form h3{
 
 
     /* POP-UP **/
-    [hidden]{
+    
+    [hidden] {
         display: none;
     }
     
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    button{
+        background-color: transparent;
+        border: 0;
+    }
+    .card:hover{
+
+    }
+
     .pop-up{
         position: fixed;
         z-index: 1;
-        top: 0px;
+        top: 0;
+        left: 0;
 
         background: rgba(216, 246, 250, 0.7);
 
         height: 100%;
         width: 100%;
+
     }
     .pop-up_box{
         opacity: 100%;
