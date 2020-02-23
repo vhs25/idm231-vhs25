@@ -214,6 +214,7 @@ input[type=text]{
         height: 100%;
         width: 100%;
 
+        visibility: hidden;
     }
     .pop-up_box{
         opacity: 100%;
