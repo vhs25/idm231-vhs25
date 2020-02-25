@@ -1,16 +1,6 @@
-//const popup = document.getElementsByClassName('pop-up');
+const popup = document.getElementsByClassName('pop-up');
 const buttons = document.querySelectorAll('button');
-console.log(buttons);
-
-
-buttons.forEach(button =>{
-    console.log(button);
-
-    button.addEventLiistener(click, event =>{
-            handleButtonClick(event);
-        });
-});
-
+// console.log(buttons);
 
 const handleButtonClick = cardPick =>{
     console.log(cardPick);
@@ -18,5 +8,15 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick.target.id);
     popup.hidden = false;
     const feedback = document.querySelector('p');
-    feedback.innerHTML = message;
+    // feedback.innerHTML = message;
 }
+
+buttons.forEach(button =>{
+    // console.log(button);
+
+    button.addEventListener('click', event =>{
+            handleButtonClick(event);
+        });
+});
+
+

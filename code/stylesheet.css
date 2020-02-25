@@ -75,8 +75,7 @@ form{
 
     display: grid;
     grid-template-columns: 55.5% 44.5%;
-    grid-area: 
-        'form1 form2';
+    grid-area: 'form1 form2';
     grid-column-gap: .65rem;
 }
 .form1 input{
