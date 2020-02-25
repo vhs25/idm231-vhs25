@@ -110,12 +110,12 @@ input[type=text]{
     margin: 1em 0 7em;
     perspective: 1000px;
 }
-.flip-card-front img{
+.flip-card-front input[type="image"]{
     margin: 1em .5em;
     border-radius: 17px;
     box-shadow: 0 5px 10px 4px lightgray;
 }
-.flip-card-front img:hover{
+.flip-card-front input[type="image"]:hover{
     box-shadow: 0 5px 10px 4px #b3afaf;
 
 }

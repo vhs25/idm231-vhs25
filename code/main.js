@@ -1,6 +1,13 @@
 const popup = document.getElementsByClassName('pop-up');
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.card');
 // console.log(buttons);
+
+function cardInfo(){
+    if(id='aeries'){
+        pic
+    }
+}
+
 
 const handleButtonClick = cardPick =>{
     console.log(cardPick);
