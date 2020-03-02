@@ -186,7 +186,10 @@ input[type=text]{
     /* POP-UP **/
     
     
-
+/*  [hidden] {
+        display: none;
+      } **/
+      
     button:hover{
         cursor: pointer;
     }
