@@ -185,9 +185,6 @@ input[type=text]{
 
     /* POP-UP **/
     
-    [hidden] {
-        display: none;
-    }
     
 
     button:hover{
@@ -197,9 +194,6 @@ input[type=text]{
     button{
         background-color: transparent;
         border: 0;
-    }
-    .card:hover{
-
     }
 
     .pop-up{
@@ -213,7 +207,7 @@ input[type=text]{
         height: 100%;
         width: 100%;
 
-        visibility: hidden;
+        display: none;
     }
     .pop-up_box{
         opacity: 100%;
