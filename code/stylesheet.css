@@ -210,7 +210,7 @@ input[type=text]{
         height: 100%;
         width: 100%;
 
-        display: none;
+        /*display: none;**/
     }
     .pop-up_box{
         opacity: 100%;

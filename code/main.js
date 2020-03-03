@@ -1,6 +1,6 @@
-const popup = document.getElementsByClassName('pop-up');
+const popup = document.getElementById('pop-up');
 //const popupbox = document.getElementsByClassName('pop-up-box')
-const p_i = document.getElementById('pi');                          //Do i need a variable to change the p_i?
+const p_i = document.getElementById('pi');
 const p_h = document.getElementById('ph');
 const p_p = document.getElementById('pp');
 const buttons = document.querySelectorAll('.card');
@@ -74,11 +74,8 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick);
     console.log(cardPick.target);
     console.log(cardPick.target.id);
-    //console.log(cardInfo.p_i);
-
     popup.hidden = false;
-    const feedback = document.querySelector('p');
-    // feedback.innerHTML = message;
+    cardInfo();
 }
 
 buttons.forEach(button =>{
@@ -89,9 +86,13 @@ buttons.forEach(button =>{
         });
 });
 
-buttons.onclick = function() {
+//trying to make modal appear
+/*buttons.onclick = function() {
     popup.style.display  = "block";
   }
+**/
+
+
 
 /* ZODIAC
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
