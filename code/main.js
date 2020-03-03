@@ -75,7 +75,7 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick.target);
     console.log(cardPick.target.id);
     popup.hidden = false;
-    cardInfo();
+    cardInfo(cardPick.target.id);
 }
 
 buttons.forEach(button =>{
@@ -85,6 +85,10 @@ buttons.forEach(button =>{
             handleButtonClick(event);
         });
 });
+
+popup.addEventListener('click', event =>{
+    popup.hidden = true;
+})
 
 //trying to make modal appear
 /*buttons.onclick = function() {
