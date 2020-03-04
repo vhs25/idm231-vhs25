@@ -4,6 +4,7 @@ const p_i = document.getElementById('pi');
 const p_h = document.getElementById('ph');
 const p_p = document.getElementById('pp');
 const buttons = document.querySelectorAll('.card');
+const speakers = document.getElementById('speakers');
 // console.log(buttons);
 
 function cardInfo(id){
@@ -76,11 +77,10 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick.target.id);
     popup.hidden = false;
     cardInfo(cardPick.target.id);
+    
 }
 
 buttons.forEach(button =>{
-    // console.log(button);
-
     button.addEventListener('click', event =>{
             handleButtonClick(event);
         });
@@ -89,12 +89,6 @@ buttons.forEach(button =>{
 popup.addEventListener('click', event =>{
     popup.hidden = true;
 })
-
-//trying to make modal appear
-/*buttons.onclick = function() {
-    popup.style.display  = "block";
-  }
-**/
 
 
 
