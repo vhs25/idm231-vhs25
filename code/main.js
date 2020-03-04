@@ -77,7 +77,11 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick.target.id);
     popup.hidden = false;
     cardInfo(cardPick.target.id);
-    
+
+    console.log(cardPick.target.dataset.sound);
+    const sound = cardPick.target.dataset.sound;
+    speakers.src = `sound_effects/${sound}.mp3`;
+    speakers.play();
 }
 
 buttons.forEach(button =>{
