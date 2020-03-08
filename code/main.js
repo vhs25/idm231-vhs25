@@ -5,7 +5,9 @@ const p_h = document.getElementById('ph');
 const p_p = document.getElementById('pp');
 const buttons = document.querySelectorAll('.card');
 const speakers = document.getElementById('speakers');
-// console.log(buttons);
+const month = document.getElementById('month');
+const day = document.getElementById('day');
+const form = document.querySelectorAll('.form');
 
 function cardInfo(id){
     if(id==='aries'){
@@ -94,32 +96,34 @@ popup.addEventListener('click', event =>{
     popup.hidden = true;
 })
 
+form.addEventListener('submit', event =>{
+    
+})
 
-
-/* ZODIAC
+{//zodiac
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
-  AstroSign = "Capricorn";
+  id = "Capricorn";
 } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth <= 21)) {
-  AstroSign = "Sag";
+  id = "Sag";
 } else if ((whichMonth == 10 && whichDayOfMonth >= 24) || (whichMonth == 11 && whichDayOfMonth <= 21)) {
-  AstroSign = "Scorpio";
+  id = "Scorpio";
 } else if ((whichMonth == 9 && whichDayOfMonth >= 23) || (whichMonth == 10 && whichDayOfMonth <= 23)) {
-  AstroSign = "Libra";
+  id = "Libra";
 } else if ((whichMonth == 8 && whichDayOfMonth >= 23) || (whichMonth == 9 && whichDayOfMonth <= 22)) {
-  AstroSign = "Virgo";
+  id = "Virgo";
 } else if ((whichMonth == 7 && whichDayOfMonth >= 23) || (whichMonth == 8 && whichDayOfMonth <= 22)) {
-  AstroSign = "Leo";
+  id = "Leo";
 } else if ((whichMonth == 6 && whichDayOfMonth >= 22) || (whichMonth == 7 && whichDayOfMonth <= 22)) {
-  AstroSign = "Cancer";
+  id = "Cancer";
 } else if ((whichMonth == 5 && whichDayOfMonth >= 21) || (whichMonth == 6 && whichDayOfMonth <= 21)) {
-  AstroSign = "Gemini";
+  id = "Gemini";
 } else if ((whichMonth == 4 && whichDayOfMonth >= 20) || (whichMonth == 5 && whichDayOfMonth <= 20)) {
-  AstroSign = "Taurus";
+  id = "Taurus";
 } else if ((whichMonth == 3 && whichDayOfMonth >= 21) || (whichMonth == 4 && whichDayOfMonth <= 19)) {
-  AstroSign = "Aries";
+  id = "Aries";
 } else if ((whichMonth == 2 && whichDayOfMonth >= 19) || (whichMonth == 3 && whichDayOfMonth <= 20)) {
-  AstroSign = "Pisces";
+  id = "Pisces";
 } else if ((whichMonth == 1 && whichDayOfMonth >= 20) || (whichMonth == 2 && whichDayOfMonth <= 18)) {
-  AstroSign = "Aquarius";
+  id = "Aquarius";
 }
-**/
+}
