@@ -97,7 +97,8 @@ popup.addEventListener('click', event =>{
 })
 
 form.addEventListener('submit', event =>{
-    
+    event.preventdefault()
+    console.log(enter);
 })
 
 {//zodiac
