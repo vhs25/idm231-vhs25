@@ -103,10 +103,11 @@ const formFunction = event =>{
 
     event.preventDefault();
     
-    console.log('month: ', month);
-    console.log(submit);
     console.log(form);
-
+    console.log(form.month);
+    console.log('month: ', form.month.value);
+    console.log(form.day);
+    console.log('day: ', form.day.value);
 }
 
 formSubmit.addEventListener('submit', formFunction);
