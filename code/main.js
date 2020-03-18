@@ -7,7 +7,8 @@ const buttons = document.querySelectorAll('.card');
 const speakers = document.getElementById('speakers');
 const month = document.getElementById('month');
 const day = document.getElementById('day');
-const form = document.querySelector('form');
+const form = document.getElementsByClassName('form');
+const submit = document.getElementById('submit');
 
 function cardInfo(id){
     if(id==='aries'){
@@ -96,16 +97,13 @@ popup.addEventListener('click', event =>{
     popup.hidden = true;
 })
 
-const handleDate = whichCard =>{
-    console.log(submitted);
-}
+console.log('month: ', month);
+console.log(submit);
+console.log(form);
 
-form.addEventListener('submit', event =>{
-    event.preventdefault()
-    handleDate(event);
-})
 
-function zodiac(id){
+
+/*function zodiac(id){
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
   id = "Capricorn";
 } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth <= 21)) {
@@ -132,3 +130,4 @@ if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayO
   id = "Aquarius";
 }
 }
+**/

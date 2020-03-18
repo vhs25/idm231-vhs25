@@ -16,18 +16,6 @@
     src: url('fonts/comme/comme-regular_1-webfont.woff') format('woff');
     src: url('fonts/comme/comme-regular_1-webfont.woff2') format('woff2');
 }
-/*
-@font-face{
-    font-family: 'comme_med';
-    src: url('fonts/comme/comme-medium-webfont.woff') format('woff');
-    src: url('fonts/comme/comme-medium-webfont.woff2') format('woff2');
-}
-@font-face{
-    font-family: 'comme_bold';
-    src: url('fonts/comme/comme-bold-webfont.woff') format('woff');
-    src: url('fonts/comme/comme-bold-webfont.woff2') format('woff2');
-}
-**/
 
 :root{
     --orange: #fbaa71;
@@ -48,14 +36,14 @@
 
 .home h1{
     color: var(--blue);
-    font-family: spirit;
+    font-family: spirit, Arial, Helvetica, sans-serif;
     font-size: 4em;
     letter-spacing: .075em;
     text-align: center;
     margin: .75em 0 .65em;
 }
 .home h2{
-    font-family: spirit;
+    font-family: spirit, Arial, Helvetica, sans-serif;
     font-size: 3em;
     margin: .1em 0 .5em;
     text-align: center;
@@ -63,18 +51,18 @@
 
 h3{
     color: var(--orange);
-    font-family: comme_reg;
+    font-family: comme_reg, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     text-align: center;
     margin: 1.5em 0 1em;
 }
 form{
-    font-family: comme_light;
+    font-family: comme_light, Arial, Helvetica, sans-serif;
     width: 20%;
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 55.5% 44.5%;
+    grid-template-columns: 50% 50%;
     grid-area: 'form1 form2';
     grid-column-gap: .65rem;
 }
@@ -82,7 +70,7 @@ form{
     width: 50px;
 }
 .form2{
-    width: 100px;
+    width: 50px;
     justify-self: right;
 }
 .form2 input{
@@ -93,8 +81,14 @@ form input{
     border-width: 1px;
     padding: .25rem .5rem;
 }
+input [type=submit]{
+    font-family: comme-light, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: (--light_blue);
+    margin: 1rem auto;
+}
 input[type=text]{
-    font-family: comme_light;
+    font-family: comme_light, Arial, Helvetica, sans-serif;
     font-size: .8rem;
 }
 
@@ -185,11 +179,6 @@ input[type=text]{
 
     /* POP-UP **/
     
-    
-/*  [hidden] {
-        display: none;
-      } **/
-      
     button:hover{
         cursor: pointer;
     }
