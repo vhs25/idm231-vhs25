@@ -7,8 +7,8 @@ const buttons = document.querySelectorAll('.card');
 const speakers = document.getElementById('speakers');
 const month = document.getElementById('month');
 const day = document.getElementById('day');
-const form = document.getElementsByClassName('form');
-const submit = document.getElementById('submit');
+const formSubmit = document.getElementById('form');
+//const submit = document.getElementById('submit');
 
 function cardInfo(id){
     if(id==='aries'){
@@ -97,11 +97,16 @@ popup.addEventListener('click', event =>{
     popup.hidden = true;
 })
 
+
+const formFunction = event =>{
+
 console.log('month: ', month);
 console.log(submit);
 console.log(form);
 
+}
 
+formSubmit.addEventListener('submit', formFunction);
 
 /*function zodiac(id){
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
