@@ -7,6 +7,7 @@ const buttons = document.querySelectorAll('.card');
 const speakers = document.getElementById('speakers');
 const month = document.getElementById('month');
 const day = document.getElementById('day');
+const form = document.getElementsByClassName('form');
 const formSubmit = document.getElementById('form');
 //const submit = document.getElementById('submit');
 
@@ -100,9 +101,11 @@ popup.addEventListener('click', event =>{
 
 const formFunction = event =>{
 
-console.log('month: ', month);
-console.log(submit);
-console.log(form);
+    event.preventDefault();
+    
+    console.log('month: ', month);
+    console.log(submit);
+    console.log(form);
 
 }
 
