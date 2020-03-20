@@ -63,7 +63,6 @@ form{
 
     display: grid;
     grid-template-columns: 22.5% 22.5% 55%;
-    grid-area: 'form1 form2 submit';
     grid-column-gap: .65rem;
     align-content: center;
 }
@@ -230,7 +229,6 @@ input[type=text]{
     .pop-up_box h1{
         font-family: spirit;
         font-size: 2.5em;
-        align-self: left;
     }
     .pop-up_box p{
         font-family: comme_light;
