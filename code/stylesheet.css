@@ -62,12 +62,14 @@ form{
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-area: 'form1 form2';
+    grid-template-columns: 22.5% 22.5% 55%;
+    grid-area: 'form1 form2 submit';
     grid-column-gap: .65rem;
+    align-content: center;
 }
 .form1 input{
     width: 50px;
+    align-self: center;
 }
 .form2{
     width: 50px;
@@ -81,11 +83,13 @@ form input{
     border-width: 1px;
     padding: .25rem .5rem;
 }
-input [type=submit]{
-    font-family: comme-light, Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: (--light_blue);
-    margin: 1rem auto;
+input[type=submit]{
+    font-family: comme_light, Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    background-color: var(--light_blue);
+    margin: 0 1rem;
+    align-self: flex-end;
+    max-width: 80px;
 }
 input[type=text]{
     font-family: comme_light, Arial, Helvetica, sans-serif;

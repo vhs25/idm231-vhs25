@@ -1,24 +1,28 @@
-const popup = document.getElementById('pop-up');
+var popup = document.getElementById('pop-up');
 //const popupbox = document.getElementsByClassName('pop-up-box')
-const p_i = document.getElementById('pi');
-const p_h = document.getElementById('ph');
-const p_p = document.getElementById('pp');
-const buttons = document.querySelectorAll('.card');
-const speakers = document.getElementById('speakers');
-const month = document.getElementById('month');
-const day = document.getElementById('day');
-const form = document.getElementsByClassName('form');
-const formSubmit = document.getElementById('form');
+var p_i = document.getElementById('pi');
+var p_h = document.getElementById('ph');
+var p_p = document.getElementById('pp');
+var buttons = document.querySelectorAll('.card');
+var speakers = document.getElementById('speakers');
+var month = document.getElementById('month');
+var day = document.getElementById('day');
+var form = document.getElementsByClassName('form');
+var formSubmit = document.getElementById('form');
 //const submit = document.getElementById('submit');
+
+// HAVE DOCUMENT.GETELEMENTID WORK TOGETHER WITH ZODIAC 
+//JUST MAKE A NEW FUNCTION
+
 
 function cardInfo(id){
     if(id==='aries'){
-        p_i.src = "images/themagician_aeries.png"
+        p_i.src = "images/themagician_aries.png"
         p_h.innerHTML = "The Magician"
         p_p.innerHTML = "The Magician card represents a resourceful, self-empowered engergy. Those who embody the Magician card are able to harness that boundless energy and use it to take action and work towards achieving their goals."
     }
     else if(id==='taurus'){
-        p_i.src = "images/"
+        p_i.src = "images/thechariot_taurus.png"
         p_h.innerHTML = "The Chariot"
         p_p.innerHTML = "The Chariot card represents one with a strong will and focused mind. Bold determination carries the charriot to triumph. Through strength of mind you find success."
     }
@@ -33,17 +37,17 @@ function cardInfo(id){
         p_p.innerHTML = "The High Priestess is a card of intuition. She is the guardian of the mind. This card calls to your ituition, allowing you to listen to your voice within and find wisdom."
     }
     else if(id==='leo'){
-        p_i.src = "images/"
+        p_i.src = "images/heirophant_leo.png"
         p_h.innerHTML = "The Heirophant"
         p_p.innerHTML = "The Heirophant card represents a natural teqacher or leader. These people have a hunger for knowledge and seek a deep understanding of the things they do."
     }
     else if(id==='virgo'){
-        p_i.src = "images/theworld_virgo.pmg"
+        p_i.src = "images/theworld_virgo.png"
         p_h.innerHTML = "The World"
         p_p.innerHTML = "The World card is known for representing harmony and balance. These people are encouraged to recognize the accomplishments they've made, for it takes work to achieve such balance in your life."
     }
     else if(id==='libra'){
-        p_i.src = "images/"
+        p_i.src = "images/temperence_libra.png"
         p_h.innerHTML = "Temperance"
         p_p.innerHTML = "Temperence represents a peaceful and cooperative person. Their patience and cool temperment allows them to be a moderator and display calmness while under stress."
     }
@@ -68,7 +72,7 @@ function cardInfo(id){
         p_p.innerHTML = "The Fool card represents spontaneity and and innocence. These people are commited to following their heart, even in the face of the unknown. This boldness can be seen as naive, but is really just a way of being free."
     }
     else if(id==='pisces'){
-        p_i.src = "images/"
+        p_i.src = "images/strength_pisces.png"
         p_h.innerHTML = "Strength"
         p_p.innerHTML = "The Strength card represents people who have a strength of heart that empowers them to live confidently and compasionately. These people commit to their values and show persistece for what they know they need."
     }
@@ -80,7 +84,11 @@ const handleButtonClick = cardPick =>{
     console.log(cardPick.target);
     console.log(cardPick.target.id);
     popup.hidden = false;
+
     cardInfo(cardPick.target.id);
+    /*if{
+    
+    } **/
 
     console.log(cardPick.target.dataset.sound);
     const sound = cardPick.target.dataset.sound;
@@ -98,51 +106,73 @@ popup.addEventListener('click', event =>{
     popup.hidden = true;
 })
 
-function zodiac(id){
+function zodiac(whichMonth, whichDayOfMonth){
+    console.log('In Zodiac');
+    let id = '';
     if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
-      id = "Capricorn";
+      id = "capricorn";
     } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth <= 21)) {
-      id = "Sag";
+      id = "sag";
     } else if ((whichMonth == 10 && whichDayOfMonth >= 24) || (whichMonth == 11 && whichDayOfMonth <= 21)) {
-      id = "Scorpio";
+      id = "scorpio";
     } else if ((whichMonth == 9 && whichDayOfMonth >= 23) || (whichMonth == 10 && whichDayOfMonth <= 23)) {
-      id = "Libra";
+      id = "libra";
     } else if ((whichMonth == 8 && whichDayOfMonth >= 23) || (whichMonth == 9 && whichDayOfMonth <= 22)) {
-      id = "Virgo";
+      id = "virgo";
     } else if ((whichMonth == 7 && whichDayOfMonth >= 23) || (whichMonth == 8 && whichDayOfMonth <= 22)) {
-      id = "Leo";
+      id = "leo";
     } else if ((whichMonth == 6 && whichDayOfMonth >= 22) || (whichMonth == 7 && whichDayOfMonth <= 22)) {
-      id = "Cancer";
+      id = "cancer";
     } else if ((whichMonth == 5 && whichDayOfMonth >= 21) || (whichMonth == 6 && whichDayOfMonth <= 21)) {
-      id = "Gemini";
+      id = "gemini";
     } else if ((whichMonth == 4 && whichDayOfMonth >= 20) || (whichMonth == 5 && whichDayOfMonth <= 20)) {
-      id = "Taurus";
+      id = "taurus";
     } else if ((whichMonth == 3 && whichDayOfMonth >= 21) || (whichMonth == 4 && whichDayOfMonth <= 19)) {
-      id = "Aries";
+      id = "aries";
     } else if ((whichMonth == 2 && whichDayOfMonth >= 19) || (whichMonth == 3 && whichDayOfMonth <= 20)) {
-      id = "Pisces";
+      id = "pisces";
     } else if ((whichMonth == 1 && whichDayOfMonth >= 20) || (whichMonth == 2 && whichDayOfMonth <= 18)) {
-      id = "Aquarius";
+      id = "aquarius";
     }
+    return(id);
+
 }
 
 const formFunction = event =>{
 
     event.preventDefault();
     
-    const whichMonth = form.month.value;
-    const whichDayOfMonth = form.day.value;
+    let whichMonth = form.month.value;
+    let whichDayOfMonth = form.day.value;
 
     console.log(whichMonth);
     console.log(whichDayOfMonth);
 
-    zodiac()
+    let zodiacId = zodiac(whichMonth, whichDayOfMonth);
+    console.log(zodiacId);
 
+    //let zodiacElement =  document.getElementById(zodiacId);
+    //console.log(zodiacElement);
+
+    popup.hidden = false;
+    cardInfo(zodiacId);
+
+    console.log(zodiacId);
+    
+    var soundId = document.getElementById(zodiacId);
+    console.log(soundId.dataset.sound);
+
+    const sound = soundId.dataset.sound;
+    speakers.src = `sound_effects/${sound}.mp3`;
+    speakers.play();
+
+    
     //console.log(form);
     //console.log(form.month);
     console.log('month: ', form.month.value);
     //console.log(form.day);
     console.log('day: ', form.day.value);
 }
+
 
 formSubmit.addEventListener('submit', formFunction);
